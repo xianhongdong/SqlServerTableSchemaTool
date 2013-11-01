@@ -82,5 +82,23 @@ namespace DatabaseSchemaTool
         {
             Close();
         }
+
+        private void buttonSelectAll_Click(object sender, EventArgs e)
+        {
+            DataTable dt = tableNameDataSet.Tables[0];
+            foreach(DataRow row in dt.Rows)
+            {
+                row["select"] = 1;
+            }
+        }
+
+        private void buttonClearSelect_Click(object sender, EventArgs e)
+        {
+            DataTable dt = tableNameDataSet.Tables[0];
+            foreach (DataRow row in dt.Rows)
+            {
+                row["select"] = 0;
+            }
+        }
     }
 }

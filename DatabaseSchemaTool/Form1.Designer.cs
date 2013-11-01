@@ -43,6 +43,8 @@
             this.ColumnTableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonExport = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonSelectAll = new System.Windows.Forms.Button();
+            this.buttonClearSelect = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -192,12 +194,34 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // buttonSelectAll
+            // 
+            this.buttonSelectAll.Location = new System.Drawing.Point(12, 378);
+            this.buttonSelectAll.Name = "buttonSelectAll";
+            this.buttonSelectAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonSelectAll.TabIndex = 3;
+            this.buttonSelectAll.Text = "SelectAll";
+            this.buttonSelectAll.UseVisualStyleBackColor = true;
+            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
+            // 
+            // buttonClearSelect
+            // 
+            this.buttonClearSelect.Location = new System.Drawing.Point(93, 378);
+            this.buttonClearSelect.Name = "buttonClearSelect";
+            this.buttonClearSelect.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearSelect.TabIndex = 3;
+            this.buttonClearSelect.Text = "Clear";
+            this.buttonClearSelect.UseVisualStyleBackColor = true;
+            this.buttonClearSelect.Click += new System.EventHandler(this.buttonClearSelect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(540, 413);
+            this.Controls.Add(this.buttonClearSelect);
+            this.Controls.Add(this.buttonSelectAll);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.dataGridView1);
@@ -230,6 +254,8 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableName;
+        private System.Windows.Forms.Button buttonSelectAll;
+        private System.Windows.Forms.Button buttonClearSelect;
     }
 }
 
