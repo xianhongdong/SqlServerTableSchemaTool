@@ -59,7 +59,7 @@ namespace DatabaseSchemaTool
                 string strName = dr["table_name"] as string;
                 if (!isSelect)
                     continue;
-                string sql = string.Format("select * from {0} where 1=2", strName);
+                string sql = string.Format("select * from [{0}] where 1=2", strName);
                 da.SelectCommand.CommandText = sql;
                 da.Fill(exportSchemaTableDataSet,strName);
             }
