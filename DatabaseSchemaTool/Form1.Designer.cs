@@ -45,6 +45,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonSelectAll = new System.Windows.Forms.Button();
             this.buttonClearSelect = new System.Windows.Forms.Button();
+            this.buttonExpData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -161,8 +162,10 @@
             // ColumnSelect
             // 
             this.ColumnSelect.DataPropertyName = "select";
+            this.ColumnSelect.FalseValue = "0";
             this.ColumnSelect.HeaderText = "选择";
             this.ColumnSelect.Name = "ColumnSelect";
+            this.ColumnSelect.TrueValue = "1";
             // 
             // ColumnTableName
             // 
@@ -175,9 +178,9 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(355, 378);
+            this.buttonExport.Location = new System.Drawing.Point(196, 378);
             this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(75, 23);
+            this.buttonExport.Size = new System.Drawing.Size(110, 23);
             this.buttonExport.TabIndex = 1;
             this.buttonExport.Text = "Export Schema";
             this.buttonExport.UseVisualStyleBackColor = true;
@@ -214,6 +217,16 @@
             this.buttonClearSelect.UseVisualStyleBackColor = true;
             this.buttonClearSelect.Click += new System.EventHandler(this.buttonClearSelect_Click);
             // 
+            // buttonExpData
+            // 
+            this.buttonExpData.Location = new System.Drawing.Point(312, 378);
+            this.buttonExpData.Name = "buttonExpData";
+            this.buttonExpData.Size = new System.Drawing.Size(110, 23);
+            this.buttonExpData.TabIndex = 1;
+            this.buttonExpData.Text = "Export Data";
+            this.buttonExpData.UseVisualStyleBackColor = true;
+            this.buttonExpData.Click += new System.EventHandler(this.buttonExpData_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -223,6 +236,7 @@
             this.Controls.Add(this.buttonClearSelect);
             this.Controls.Add(this.buttonSelectAll);
             this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonExpData);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
@@ -230,6 +244,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database Schema Tool";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -252,10 +267,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableName;
         private System.Windows.Forms.Button buttonSelectAll;
         private System.Windows.Forms.Button buttonClearSelect;
+        private System.Windows.Forms.Button buttonExpData;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTableName;
     }
 }
 
